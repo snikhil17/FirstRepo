@@ -1,0 +1,103 @@
+********Initial Step******
+
+---Configure----
+To configure name:
+	git config --global user.name Nikhil_Shrestha
+To configure Email add:
+	git config --global user.email n.shrestha17@gmail.com
+
+To check the user name:
+	git config --global user.name
+To check the email:
+	git config --global user.email
+
+Setting up SSH key
+1. Go to settings in Github account
+2. Go to SSH and GPG keys
+3. Click " generating SSH keys "
+4. click "Generating a new SSH key and adding it to the ssh-agent"
+5. use code snipped under "Paste the text below, substituting in your GitHub email address.":
+	ssh-keygen -t ed25519 -C "your_email@example.com"
+******Key is Generated now*****
+6. ***Deploy the Genearated KEy***:
+Scroll down to "Adding your SSH key to the ssh-agent"
+7. Copy:  eval "$(ssh-agent -s)"
+*** We got our Process ID now***
+8. Scroll down till you see "Add your SSH private key to the ssh-agent..."
+	Run the code: ssh-add ~/.ssh/id_ed25519
+***Private SSH key added to SSH agent***
+9. click on the link " Adding a new SSH key to your GitHub account."
+10. Copy and paste in gitbash:  cat ~/.ssh/id_ed25519.pub
+***This will give Content of the key and same will be copied in out github SSH key***
+11. Copy the result from 10. and paste in Github account -> new SSH key -> also add title: Nikhil's PC. Finally click add SSH key
+
+
+
+
+
+****To Edit Own Code*****
+To clone in a new_Folder in PC
+	git clone https://github.com/snikhil17/FirstRepo.git Nikhil/
+
+To clone in a created folder in PC
+	git clone https://github.com/snikhil17/FirstRepo.git
+
+To create a new branch:
+	git branch everyday_updates
+To get the list of branches created
+	git branch
+To switch to created branch:
+	git checkout <created_branch_name>
+	e.g.  git checkout everyday_updates
+
+To create a new branch and switch to the created branch in one step:
+	git checkout -b <new_branch_name>
+	e.g. git checkout -b FlaskIntegration
+
+**Now edit the codes accordingly and commit and push**
+
+To check the REMOTE name
+	git remote -v
+To push the chages
+	git push <remote_name(alias)> <branch_name>
+	e.g. git push origin everyday_updates
+
+To merge the branches'
+1. Go to master Branch
+	git merge <branch_to_be_merged_name>
+	e.g. git merge everyday_updates
+
+
+
+
+
+
+
+
+
+Add all the files in Staging area:
+	git add -A
+Commit all the files and inserting message:
+	git commit -m "Type your msg here"
+Check the status of git:
+	git status
+Undo the edit: Matches working directory to last commit
+- For single file:
+	git checkout <file_name>
+- For all files:
+	git checkout -f
+
+To track the commits and changes:
+- for all commits:
+	git log
+	q : to exit 
+for certain number of commit
+	git log -p -num_of_commits_you want_to_see
+	e.g. git log -p -5
+
+To check the difference between two commits: following cmd compares working tree with staging area. If same: NO OUTPUT, else: Difference will be highlighted	
+	git diff
+- To compare last Staging area with last commit
+	git diff --staged
+
+ 
