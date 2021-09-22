@@ -5,13 +5,13 @@ To configure name:
 	git config --global user.name Nikhil_Shrestha
 To configure Email add:
 	git config --global user.email n.shrestha17@gmail.com
-
 To check the user name:
 	git config --global user.name
 To check the email:
 	git config --global user.email
 
-Setting up SSH key
+
+************Setting up SSH key**************
 1. Go to settings in Github account
 2. Go to SSH and GPG keys
 3. Click " generating SSH keys "
@@ -32,16 +32,11 @@ Scroll down to "Adding your SSH key to the ssh-agent"
 11. Copy the result from 10. and paste in Github account -> new SSH key -> also add title: Nikhil's PC. Finally click add SSH key
 
 
-
-
-
 ****To Edit Own Code*****
 To clone in a new_Folder in PC
 	git clone https://github.com/snikhil17/FirstRepo.git Nikhil/
-
 To clone in a created folder in PC
 	git clone https://github.com/snikhil17/FirstRepo.git
-
 To create a new branch:
 	git branch everyday_updates
 To get the list of branches created
@@ -49,13 +44,11 @@ To get the list of branches created
 To switch to created branch:
 	git checkout <created_branch_name>
 	e.g.  git checkout everyday_updates
-
 To create a new branch and switch to the created branch in one step:
 	git checkout -b <new_branch_name>
 	e.g. git checkout -b FlaskIntegration
-
-**Now edit the codes accordingly and commit and push**
-
+	
+#########Now edit the codes accordingly and commit and push#######
 To check the REMOTE name
 	git remote -v
 To push the chages
@@ -67,27 +60,21 @@ To merge the branches'
 	git merge <branch_to_be_merged_name>
 	e.g. git merge everyday_updates
 
-
-
-
-
-
-
-
-
+******Other useful commands*****
 Add all the files in Staging area:
 	git add -A
 Commit all the files and inserting message:
 	git commit -m "Type your msg here"
 Check the status of git:
 	git status
-Undo the edit: Matches working directory to last commit
+	
+*******Undo the edit: Matches working directory to last commit*******
 - For single file:
 	git checkout <file_name>
 - For all files:
 	git checkout -f
 
-To track the commits and changes:
+***********To track the commits and changes:***********
 - for all commits:
 	git log
 	q : to exit 
@@ -95,7 +82,7 @@ for certain number of commit
 	git log -p -num_of_commits_you want_to_see
 	e.g. git log -p -5
 
-To check the difference between two commits: following cmd compares working tree with staging area. If same: NO OUTPUT, else: Difference will be highlighted	
+****To check the difference between two commits: following cmd compares working tree with staging area. If same: NO OUTPUT, else: Difference will be highlighted****
 	git diff
 - To compare last Staging area with last commit
 	git diff --staged
